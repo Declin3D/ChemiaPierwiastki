@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Układ Pierwiastków</title>
+</head>
+<body style="background-color: #c0c0c0;">
+    <script src="script.js">
+    </script>
+    <header style="color: black;height: 60px;border-radius: 20px;">
+        <center>Pierwiastki chemiczne i ich cechy 1-20.</center>
+    </header>
+    <div style="position: relative;left: 50%;transform: translateX(-50%); width: 1085px;box-shadow: 2px 2px 15px 18px black; background-color: #2B2828;">
+        <img src="img/okres3.png" alt="okres">
+
+        <div id="pokazanyPierw">
+            <img src="" id="pierw">
+        </div>
+
+        <div class="pierwiastek" id="wodor" class="bloks" onmouseup="ZbadajPierwiastek(1,1,1,1, this)">
+            <img src="img/wodor.png">
+        </div>
+        <div class="pierwiastek" id="hel" class="bloks" onmouseup="ZbadajPierwiastek(2,4,1,8, this)">
+            <img src="img/hel.png">
+        </div>
+        <div class="pierwiastek" id="lit" class="bloks" onmouseup="ZbadajPierwiastek(3,7,2,1, this)">
+            <img src="img/lit.png">
+        </div>
+        <div class="pierwiastek" id="beryl" class="bloks" onmouseup="ZbadajPierwiastek(4,9,2,2, this)">
+            <img src="img/beryl.png">
+        </div>
+        <div class="pierwiastek" id="bor" class="blokp" onmouseup="ZbadajPierwiastek(5,11,2,3, this)">
+            <img src="img/bor.png">
+        </div>
+        <div class="pierwiastek" id="wegiel" class="blokp" onmouseup="ZbadajPierwiastek(6,12,2,4, this)">
+            <img src="img/wegiel.png">
+        </div>
+        <div class="pierwiastek" id="azot" class="blokp" onmouseup="ZbadajPierwiastek(7,14,2,5, this)">
+            <img src="img/azot.png">
+        </div>
+        <div class="pierwiastek" id="tlen" class="blokp" onmouseup="ZbadajPierwiastek(8,16,2,6, this)">
+            <img src="img/tlen.png">
+        </div>
+        <div class="pierwiastek" id="fluor" class="blokp" onmouseup="ZbadajPierwiastek(9,19,2,7, this)">
+            <img src="img/fluor.png">
+        </div>
+        <div class="pierwiastek" id="neon" class="blokp"v onmouseup="ZbadajPierwiastek(10,20,2,8, this)">
+            <img src="img/neon.png">
+        </div>
+        <div class="pierwiastek" id="sod" class="bloks" onmouseup="ZbadajPierwiastek(11,23,3,1, this)">
+            <img src="img/sod.png">
+        </div>
+        <div class="pierwiastek" id="magnez" class="bloks" onmouseup="ZbadajPierwiastek(12,24,3,2, this)">
+            <img src="img/magnez.png">
+        </div>
+        <div class="pierwiastek" id="glin" class="blokp" onmouseup="ZbadajPierwiastek(13,27,3,3, this)">
+            <img src="img/glin.png">
+        </div>
+        <div class="pierwiastek" id="krzem" class="blokp" onmouseup="ZbadajPierwiastek(14,28,3,4, this)">
+            <img src="img/krzem.png">
+        </div>
+        <div class="pierwiastek" id="fosfor" class="blokp" onmouseup="ZbadajPierwiastek(15,31,3,5, this)">
+            <img src="img/fosfor.png">
+        </div>
+        <div class="pierwiastek" id="siarka" class="blokp" onmouseup="ZbadajPierwiastek(16,32,3,6, this)">
+            <img src="img/siarka.png">
+        </div>
+        <div class="pierwiastek" id="chlor" class="blokp" onmouseup="ZbadajPierwiastek(17,35,3,7, this)">
+            <img src="img/chlor.png">
+        </div>
+        <div class="pierwiastek" id="argon" class="blokp" onmouseup="ZbadajPierwiastek(18,40,3,8, this)">
+            <img src="img/argon.png">
+        </div>
+        <div class="pierwiastek" id="potas" class="bloks" onmouseup="ZbadajPierwiastek(19,39,4,1, this)">
+            <img src="img/potas.png">
+        </div>
+        <div class="pierwiastek" id="wapn" class="bloks" onmouseup="ZbadajPierwiastek(20,40,4,2, this)">
+            <img src="img/wapn.png">
+        </div>
+    </div>
+
+
+    <div style="height: 177px;margin-top: 50px; align-items: center;">
+        <table style=" color: lightgray; display: none; border-radius: 20px; border-collapse: collapse;  font-weight: bold; box-shadow: 1px 1px 10px 13px yellow;" id="TabelaInformacji" class="content_table">
+            <tr style="background-color: #009897; border-right:1px solid #dddddd ;">
+                <th>Liczba atomowa</th>
+                <th>Liczba masowa</th>
+                <th>Okres</th>
+                <th>Grupa</th>
+                <th>Liczba Protonów</th>
+                <th>Liczba Elektronów</th>
+                <th>Liczba Neutronów</th>
+                <th>Liczba Nukleonów</th>
+                <th>Liczba elektronów walencyjnych</th>
+                <th style="width: 150px">Powloki</th>
+                <th>Konfiguracja powlok elektronowych</th>
+            </tr>
+            <tr style="color: black; text-align: center; height: 55px; background-color: white;">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+</body>
+<footer style="color: black; margin-top: 30px;">
+    <center>Strona stworzona przez: Adam Bukowski oraz Rafał Delekta.</center>
+</footer>
+</html>

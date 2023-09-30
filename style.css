@@ -1,0 +1,113 @@
+*{
+    font: 24px Verdana;
+    
+}
+.pierwiastek{
+    z-index: 1;
+    position: absolute;
+}
+.pierwiastek:hover{
+    z-index: 2;
+    transform: scale(1.2);
+    transition: linear;
+    transition-duration: 200ms;
+    /*border: 2px #58595B solid;*/
+    transform-origin: center;
+}
+#pokazanyPierw>img{
+    width: 10%;
+    position: fixed;
+    top: 30px;
+    left: 400px;
+}
+
+.content_table{
+    border-collapse: collapse;
+    margin: 25px 0;
+
+}
+.content_table th,.content_table td{
+    padding: 12px 15px;
+    border: 1px solid #dddddd;
+}
+
+#wodor{
+    top: 28px;
+    left: 19px;
+}
+#hel{
+    top: 28px;
+    right: 6px;
+}
+#lit{
+    top: 101px;
+    left: 19px;
+}
+#beryl{
+    top: 101px;
+    left: 78.5px;
+}
+#bor{
+    top: 101px;
+    right: 300px;
+}
+#wegiel{
+    top: 101px;
+    right: 241px;
+}
+#azot{
+    top: 101px;
+    right: 182px;
+}
+#tlen{
+    top: 101px;
+    right: 123px;
+}
+#fluor{
+    top: 101px;
+    right: 65px;
+}
+#neon{
+    top: 101px;
+    right: 6px;
+}
+#sod{
+     top: 174px;
+     left: 19px;
+}
+#magnez{
+    top: 174px;
+    left: 78.5px;
+}
+#glin{
+    top: 174px;
+    right: 300px;
+}
+#krzem{
+    top: 174px;
+    right: 241px;
+}
+#fosfor{
+    top: 174px;
+    right: 182px;
+}
+#siarka{
+    top: 174px;
+    right: 123px;
+}
+#chlor{
+    top: 174px;
+    right: 65px;
+}
+#argon{
+    top: 174px;
+    right: 6px;
+}
+#potas{
+    top: 246px;
+    left: 19px;
+}
+#wapn{
+    top: 246px;
+    left: 78.5px;
+}
