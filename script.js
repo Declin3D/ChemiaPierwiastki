@@ -46,5 +46,6 @@ function ZbadajPierwiastek(Z, A, okres, grupa, element){
 
     document.getElementById("TabelaInformacji").style.display = "block"
     document.getElementById(`pierw`).style.boxShadow = "1px 1px 10px 13px yellow";
-    
 }
+
+
