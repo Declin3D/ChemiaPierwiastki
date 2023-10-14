@@ -5,31 +5,12 @@ function ZbadajPierwiastek(Z, A, okres, grupa, element){
     let p = Z
     let e = Z
     let n = A - Z
-    let elekKow = Z === 2 ? 2 : grupa
+    let elekKow = Z === 2 ? 2 : grupa > 10 ? grupa - 10 : grupa
 
-    let iloscPowlok = okres
     let pozostaleElek = e 
     let powloki = [`K`,`L`,`M`,`N`,'O',`P`,`Q`]
     let powlokiWPierw = ''
-    let Konfiguracja = [iloscPowlok]
-    Konfiguracja[iloscPowlok-1] = elekKow
-    pozostaleElek -= elekKow
-    let maksElekWPowloce
-    let i = 0
-    while (i < iloscPowlok - 1) {
-
-        maksElekWPowloce = 2 * (i + 1) ** 2
-        if (pozostaleElek > maksElekWPowloce) {
-            Konfiguracja[i] = maksElekWPowloce
-            powlokiWPierw += `${powloki[i]}<sup>${maksElekWPowloce}</sup>`
-            pozostaleElek -= maksElekWPowloce
-        } else {
-            Konfiguracja[i] = pozostaleElek
-            powlokiWPierw += `${powloki[i]}<sup>${pozostaleElek}</sup>`
-        }
-        i++
-    }
-    Z === 2 ? powlokiWPierw += `${powloki[0]}<sup>${2}</sup>`: powlokiWPierw += `${powloki[i]}<sup>${elekKow}</sup>`
+    let Konfiguracja = [0,0,0,0,0,0,0]
 
     let podpowloki = ["s","p","d","f"]
     let numerki =
@@ -58,11 +39,16 @@ function ZbadajPierwiastek(Z, A, okres, grupa, element){
             else{
                 elWPodPowloce = iloscElek
             }
-            iloscElek -= numerki[y][x]
-            if(elWPodPowloce > 0)
-            podpowloka += `${y + 1}${podpowloki[x]}<sup>${elWPodPowloce}</sup> `
-        }
 
+            iloscElek -= numerki[y][x]
+            if(elWPodPowloce > 0){
+            podpowloka += `${y + 1}${podpowloki[x]}<sup>${elWPodPowloce}</sup> `
+            }
+            if(elWPodPowloce > 0) Konfiguracja[y] += elWPodPowloce
+
+            if(Konfiguracja[y-1] === 0) Konfiguracja.pop()
+            if(Konfiguracja[y] ===0) Konfiguracja.pop()
+        }
         if(x === 0){
             x = y + 1;
             y = 0;
@@ -71,7 +57,11 @@ function ZbadajPierwiastek(Z, A, okres, grupa, element){
             y++
         }
     }
-
+    for (let i = 0; i < 7; i++) {
+        if(Konfiguracja[i] > 0){
+            powlokiWPierw += `${powloki[i]}<sup>${Konfiguracja[i]}</sup>`
+        }
+    }
     let tab = document.getElementById("TabelaInformacji").rows[1].cells
     let tab2 = document.getElementById("TabelaInformacji2").rows[1].cells
     tab[0].innerHTML = Z
@@ -91,11 +81,6 @@ function ZbadajPierwiastek(Z, A, okres, grupa, element){
     document.getElementById("TabelaInformacji").style.display = "block"
     document.getElementById("TabelaInformacji2").style.display = "block"
     document.getElementById(`pierw`).style.boxShadow = "1px 1px 10px 13px yellow";
-}
-function czescPodp(aktualnyOk,podp, ilosc_elek){
-    let h = ''
-    h = `${aktualnyOk}${podp}<sup>${ilosc_elek}</sup>`
-    return h
 }
 
 
